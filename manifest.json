@@ -1,0 +1,20 @@
+{
+  "name": "Temporary Cookie Window",
+  "description": "Auto-accept cookies in this window and wipe all site data for visited origins when the window closes.",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "incognito": "split",
+  "permissions": [
+    "browsingData",
+    "webNavigation",
+    "tabs",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_title": "Temporary Cookie Window",
+    "default_popup": "popup.html"
+  }
+}
